@@ -10,6 +10,7 @@ module com.jayce.vexis.tool {
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
     requires com.almasb.fxgl.all;
+    requires com.microsoft.onnxruntime;
 
     opens com.jayce.vexis.tool to javafx.fxml;
     opens com.jayce.vexis.tool.controll to javafx.fxml;

@@ -13,5 +13,9 @@
     <VBox>
         <Button text="切换场景" onAction="#onChange"/>
         <TextField fx:id="filePath" onDragDropped="#onFileEnter" onDragOver="#onOver"/>
+        <TextField fx:id="num1"/>
+        <TextField fx:id="num2"/>
+        <Label fx:id="sum"/>
+        <Button fx:id="add" text="计算" onAction="#addSum"/>
     </VBox>
 </VBox>
