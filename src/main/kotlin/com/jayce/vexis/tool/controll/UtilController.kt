@@ -12,7 +12,7 @@ class UtilController {
 
     @FXML
     fun onBack() {
-        loadScene(SceneType.MAIN, 600.0, 200.0)
+        loadScene(SceneType.MAIN, 400.0, 200.0)
     }
 
 }

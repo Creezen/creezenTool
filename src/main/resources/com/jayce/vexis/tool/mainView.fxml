@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.VBox?>
-
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER"
+<VBox
       spacing="10.0"
       xmlns:fx="http://javafx.com/fxml"
       fx:controller="com.jayce.vexis.tool.controll.MainController">
+    <TabPane>
+        <Tab fx:id="first" text="主菜单" closable="false" onSelectionChanged="#changeFirst"/>
+        <Tab fx:id="second" text="设置页" closable="false" onSelectionChanged="#changeSecond"/>
+    </TabPane>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-    <Button text="切换场景" onAction="#onDismiss"/>
+    <VBox fx:id="content">
+        <fx:include source="first.fxml"/>
+    </VBox>
+
 </VBox>

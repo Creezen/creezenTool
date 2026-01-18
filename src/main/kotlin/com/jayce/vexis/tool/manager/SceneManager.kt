@@ -25,7 +25,7 @@ object SceneManager {
             update(scene, type)
             return
         }
-        val loader = getLoader(type)
+        val loader = getSceneLoader(type)
         val currentScene = Scene(loader.load(), width, height)
         sceneMap[type] = currentScene
         update(currentScene, type)
@@ -37,11 +37,19 @@ object SceneManager {
         stage?.scene = scene
     }
 
-    private fun getLoader(type: SceneType): FXMLLoader {
+    fun <T> getNode(name: String): T {
+        return getLoader(name).load() as T
+    }
+
+    private fun getSceneLoader(type: SceneType): FXMLLoader {
         val name = when (type) {
             SceneType.MAIN -> "mainView"
             SceneType.UTIL -> "utilView"
         }
+        return getLoader(name)
+    }
+
+    private fun getLoader(name: String): FXMLLoader {
         val resourceName = "${name}.fxml"
         val loader = FXMLLoader(MainApplication::class.java.getResource(resourceName))
         return loader

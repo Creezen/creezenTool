@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.TextField?>
+<VBox alignment="CENTER" spacing="10.0"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.jayce.vexis.tool.controll.MainController">
+
+    <Label text="这是第一个界面的内容"/>
+    <VBox>
+        <Button text="切换场景" onAction="#onChange"/>
+        <TextField fx:id="filePath" onDragDropped="#onFileEnter" onDragOver="#onOver"/>
+    </VBox>
+</VBox>
